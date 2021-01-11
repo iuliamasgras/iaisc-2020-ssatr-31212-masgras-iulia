@@ -1,0 +1,70 @@
+//sensor pentru citirea nivelului
+sensor
+	PortZero	                nivel_zero 	uses	DriverZero;
+	PortLow	                nivel_low  	uses	DriverLow;
+	PortMedium	nivel_medium	uses	DriverMedium;
+	PortHigh	                nivel_high 	uses	DriverHigh;
+
+//actuators for controlling the generators and the valves 
+actuator
+	PortCommandG1	commandG1	uses	DriverG1Control;
+	PortCommandG2	commandG2	uses	DriverG2Control;
+
+output
+	PortCommand	halt_start1	:= InitCommand;
+	PortCommand	halt_start2	:= InitCommand;
+	
+//task list
+task	T_Ctrl(PortZero zero,PortMedium medium, PortHigh high, PortLow low) 
+	output(halt_start1,halt_start2) state(){
+	schedule TaskCodeControl(zero,medium, high, low, halt_start1, halt_start2)
+}
+
+//actuator drivers
+driver        D_Comm1(halt_start1) output(PortCommandG1 con_deconG1){
+	if constant_true() then copy_PortCommand(halt_start1,con_deconG1)
+}
+	D_Comm2(halt_start2) output(PortCommandG2 con_deconG2){
+	if constant_true() then copy_PortCommand(halt_start2,con_deconG2)
+}
+
+//sensor drivers
+driver DriverZero(nivel_zero) output (PortZero l){
+	if constant_true() then copy_PortZero(nivel_zero,l)
+}
+	DriverLow(nivel_low) output (PortLow 2){
+	if constant_true() then copy_PortLow(nivel_low,2)
+}
+	DriverHigh(nivel_high) output (PortHigh 3){
+	if constant_true() then copy_PortHigh(nivel_high,3)
+}
+	DriverMedium(nivel_medium) output (PortMedium 4){
+	if constant_true() then copy_PortMedium(nivel_medium,4)
+}
+
+
+start idle {
+	mode idle() period 1000{
+		actfreq 1 do command(D_Comm1);
+		actfreq 1 do command(D_Comm2);
+		taskfreq 1 do idleTask(); 
+		taskfreq 1 do T_Ctrl(Driver);
+	}
+	mode Mode2() period 1000{
+		actfreq 1 do command(D_Comm1);
+		actfreq 1 do command(D_Comm2);
+		actfreq 1 do command(con_decon1);
+		actfreq 1 do command(q);
+		actfreq 1 do command(u1_rotor);
+		taskfreq 1 do idleTask(); 
+	}
+	mode Mode3() period 1000{
+		actfreq 1 do command(D_Comm1);
+		actfreq 1 do command(D_Comm2);
+		actfreq 1 do command(con_decon1);
+		actfreq 1 do command(con_decon2);
+		actfreq 1 do command(q);
+		actfreq 1 do command(u1_rotor);
+		actfreq 1 do command(u2_rotor);
+	
+}	

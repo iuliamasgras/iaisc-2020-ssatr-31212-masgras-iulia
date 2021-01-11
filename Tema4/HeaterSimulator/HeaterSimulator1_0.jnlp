@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" 
+    codebase="http://heater-simulator.googlecode.com/files/" 
+    href="HeaterSimulator1_0.jnlp">
+    <information>
+        <title>Heater Simulator v1.0</title>
+        <vendor>Pieter Agten</vendor>
+	<homepage>http://heater-simulator.googlecode.com/</homepage>
+    </information>
+    <resources>
+        <!-- Application Resources -->
+        <j2se version="1.6+"
+              href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="HeaterSimulator1_0.jar" main="true" />
+    </resources>
+    <application-desc
+         name="Heater Simulator application"
+         main-class="net.agten.heatersimulator.Main"
+         width="905"
+         height="814">
+     </application-desc>
+     <update check="background"/>
+</jnlp>  
