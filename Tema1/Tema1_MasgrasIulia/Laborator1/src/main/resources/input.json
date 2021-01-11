@@ -1,0 +1,346 @@
+{
+  "iterationNumber": -1,
+  "placesInformation": {
+    "P0": {
+      "placeName": "P0",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 1
+    },
+    "P1": {
+      "placeName": "P1",
+      "placeMinTime": 1,
+      "placeMaxTime": 1,
+      "placeTokenNumber": 0
+    },
+    "P2": {
+      "placeName": "P2",
+      "placeMinTime": 4,
+      "placeMaxTime": 4,
+      "placeTokenNumber": 0
+    },
+    "P3": {
+      "placeName": "P3",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 0
+    },
+    "P4": {
+      "placeName": "P4",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 1
+    },
+    "P5": {
+      "placeName": "P5",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 0
+    },
+    "P6": {
+      "placeName": "P6",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 1
+    },
+    "P7": {
+      "placeName": "P7",
+      "placeMinTime": 2,
+      "placeMaxTime": 4,
+      "placeTokenNumber": 0
+    },
+    "P8": {
+      "placeName": "P8",
+      "placeMinTime": 2,
+      "placeMaxTime": 5,
+      "placeTokenNumber": 0
+    },
+    "P9": {
+      "placeName": "P9",
+      "placeMinTime": 3,
+      "placeMaxTime": 4,
+      "placeTokenNumber": 0
+    },
+    "P10": {
+      "placeName": "P10",
+      "placeMinTime": 2,
+      "placeMaxTime": 3,
+      "placeTokenNumber": 0
+    },
+    "P11": {
+      "placeName": "P11",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 0
+    },
+    "P12": {
+      "placeName": "P12",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 0
+    },
+    "P13": {
+      "placeName": "P13",
+      "placeMinTime": 0,
+      "placeMaxTime": 0,
+      "placeTokenNumber": 0
+    }
+  },
+  "currentTransitionList": [
+    {
+      "transitionName": "T0",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P0",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P1",
+          "capacity": 1
+        },
+        {
+          "from": null,
+          "to": "P2",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T1",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P1",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P3",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T2",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P2",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P5",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T3",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P3",
+          "to": null,
+          "capacity": 1
+        },
+        {
+          "from": "P4",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P7",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T4",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P5",
+          "to": null,
+          "capacity": 1
+        },
+        {
+          "from": "P6",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P8",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T5",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P7",
+          "to": null,
+          "capacity": 1
+        },
+        {
+          "from": "P6",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P9",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T6",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P8",
+          "to": null,
+          "capacity": 1
+        },
+        {
+          "from": "P4",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P10",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T7",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P9",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P4",
+          "capacity": 1
+        },
+        {
+          "from": null,
+          "to": "P6",
+          "capacity": 1
+        },
+        {
+          "from": null,
+          "to": "P11",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T8",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P10",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P4",
+          "capacity": 1
+        },
+        {
+          "from": null,
+          "to": "P6",
+          "capacity": 1
+        },
+        {
+          "from": null,
+          "to": "P12",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T9",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P11",
+          "to": null,
+          "capacity": 1
+        },
+        {
+          "from": "P12",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+        {
+          "from": null,
+          "to": "P13",
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "transitionName": "T10",
+      "transitionMinTime": 0,
+      "transitionMaxTime": 0,
+      "placesIn": [
+        {
+          "from": "P13",
+          "to": null,
+          "capacity": 1
+        }
+      ],
+      "placesOut": [
+
+      ]
+    }
+  ]
+}
